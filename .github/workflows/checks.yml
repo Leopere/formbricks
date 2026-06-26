@@ -3,7 +3,7 @@ on: [push]
 jobs:
   build:
     name: Build, lint, and test on Node ${{ matrix.node }} and ${{ matrix.os }}
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, Linux, ARM64, leopere, local]
 
     env:
       TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
